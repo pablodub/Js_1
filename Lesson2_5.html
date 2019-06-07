@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		"use strict";
+
+		function generateArg() {
+			return parseInt(100 - Math.random() * 200);
+		}
+
+		function generateOperation() {
+			return parseInt(Math.random()*10/3);
+		}
+
+		let a = generateArg();
+		let b = generateArg();
+		let operation = generateOperation();
+		let result, answer ;
+
+		function mathOperation(operation, result){
+			switch (operation) {
+				case 0:
+					answer = summ(a, b);
+					break;
+				case 1:
+					answer =  take(a, b);
+					break;
+				case 2:
+					answer =  mult(a, b);
+					break;
+				case 3:
+					answer = division(a, b);
+					break;
+			}
+		return answer;	
+		}		
+
+		function summ(a, b) {
+			return result = ("a + b = " + (a + b));
+		}
+
+		function take(a, b) {
+			return result = ("a - b = " + (a - b));
+		}
+
+		function mult(a, b) {
+			return result = ("a * b = " + (a * b));
+		}
+
+		function division(a, b) {
+			return result = ("a / b = " + (a / b));
+		}
+
+		console.log (mathOperation(operation));
+
+	</script>
+</body>
+</html>
